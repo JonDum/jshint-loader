@@ -112,7 +112,7 @@ function jsHint(input, options) {
 			var hints = [];
 			if(errors) errors.forEach(function(error) {
 				if(!error) return;
-				var message = "  " + error.reason + " @ line " + error.line + " char " + error.character + "\n    " + error.evidence;
+				var message = "  " + error.reason + " @ line " + error.line + " char " + error.character + " ("+error.code+")\n    " + error.evidence;
 				hints.push(message);
 			}, this);
 			var message = hints.join("\n\n");
